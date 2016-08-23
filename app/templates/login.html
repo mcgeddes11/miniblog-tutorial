@@ -25,6 +25,7 @@ function set_openid(openid, pr)
           <span style="color: red;">[{{error}}]</span>
         {% endfor %}<br>
         Enter your password:<br>
+        {{ form.hidden_tag() }}
         {{ form.password(size=80) }}
         {% for error in form.password.errors %}
           <span style="color: red;">[{{error}}]</span>
